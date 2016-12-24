@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message Patient {
+	int32 patient_id = 1;
+	string last_name = 2;
+	string first_name = 3;
+	string last_name_yomi = 4;
+	string first_name_yomi = 5;
+	string sex = 6;
+	string birth_day = 7;
+	string address = 8;
+	string phone = 9;
+}
+
+service Myclinic {
+	rpc GetPatient(int32) returns (Patient); // GetPatient(int32 patientId)
+}
